@@ -7,7 +7,7 @@
 "use strict";
 
 const GHOST_ARR	= ["Spook Ghost", "Spirit Orbs", "Zombie Hand", "Skullothy", "Grimm", "Imp", "Twinky", "Will o' Wisp"];
-let SPIN_COST = 1;
+let SPIN_COST = 50;
 
 const SQUARE_SIZE = 8; 
 const SPRITE_WIDTH = 5 * SQUARE_SIZE;
