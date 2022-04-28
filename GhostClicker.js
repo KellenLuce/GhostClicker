@@ -27,7 +27,7 @@ function openModal(id){
 	if (id === "shopModal"){
 		let test = document.getElementById("closeShop");
 
-		if (parseInt(document.getElementById("balance").innerHTML) >= SPIN_COST){
+		if (parseInt(document.getElementById("cashBalance").innerHTML) >= SPIN_COST){
 			test.setAttribute('onclick',"closeModal('shopModal')");
 		} else{
 			test.setAttribute('onclick',null);
@@ -42,10 +42,10 @@ function closeModal(id){
 	let modal = document.getElementById(id);
 	switch(id) {
 		case "shopModal":
-			if (parseInt(document.getElementById("balance").innerHTML) >= SPIN_COST){
+			if (parseInt(document.getElementById("cashBalance").innerHTML) >= SPIN_COST){
 				modal.style.display = "none";
 				
-				document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) - SPIN_COST;
+				document.getElementById("cashBalance").innerHTML = parseInt(document.getElementById("cashBalance").innerHTML) - SPIN_COST;
 				SPIN_COST += SPIN_COST/2;
 				
 				document.getElementById("closeShop").innerHTML = "Give me my ghost! ($" + SPIN_COST + ")";
@@ -87,7 +87,7 @@ class Graveyard {
 		
 		this.canvas = document.getElementById(id);
 		
-		this.balance = document.getElementById("balance");
+		this.balance = document.getElementById("cashBalance");
 		
     
 		this.ctx = this.canvas.getContext("2d");
@@ -298,6 +298,7 @@ class Headstone{
 		
 		this.spriteData = spriteData;
 		
+		this.balance = document.getElementById("cashBalance");
 		
 		
 			
@@ -348,8 +349,8 @@ class Headstone{
 	}
 	
 	clickAction(){
-		balance = document.getElementById("balance");
-		balance.innerHTML = parseInt(balance.innerHTML) + this.level;
+		
+		this.balance.innerHTML = parseInt(this.balance.innerHTML) + this.level;
 		
 	}
 	
