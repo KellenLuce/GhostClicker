@@ -254,7 +254,7 @@ class Graveyard {
 			let hy2 = hy1 + SPRITE_HEIGHT;
 			
 			if( gx > hx1 && gx < hx2 && gy > hy1 && gy < hy2){
-				this.balance.innerHTML = parseInt(balance.innerHTML) + 1;
+				this.balance.innerHTML = parseInt(balance.innerHTML) + this.graveArr[i].level;
 			}
 		
 		}
