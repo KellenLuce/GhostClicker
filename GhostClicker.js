@@ -46,7 +46,7 @@ function closeModal(id){
 				modal.style.display = "none";
 				
 				document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) - SPIN_COST;
-				SPIN_COST += SPIN_COST;
+				SPIN_COST += SPIN_COST/2;
 				
 				document.getElementById("closeShop").innerHTML = "Give me my ghost! ($" + SPIN_COST + ")";
 				
