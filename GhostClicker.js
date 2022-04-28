@@ -325,9 +325,9 @@ class Headstone{
 		
 		function startY(){
 			if(count < 4){
-				return 100;
+				return 150;
 			} else if(count => 4 && count < 8 ){
-				return 300;
+				return 350;
 			} else {
 				throw new Error("Too many graves D:");
 			}
